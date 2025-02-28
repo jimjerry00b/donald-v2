@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PermisionToRouteController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\PermissionToRoleController;
 use App\Http\Controllers\RoleController;
@@ -24,4 +25,5 @@ Route::middleware('admin')->group(function(){
     Route::resource('role',RoleController::class);
     Route::resource('permission',PermissionController::class);
     Route::resource('permission_to_role',PermissionToRoleController::class);
+    Route::resource('permission_to_route', PermisionToRouteController::class);
 });

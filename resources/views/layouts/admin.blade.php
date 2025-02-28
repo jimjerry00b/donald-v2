@@ -367,6 +367,25 @@
                 </ul>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link {{ Request::segment(1) == 'permission_to_route' ? '' : 'collapsed' }}"
+                    data-bs-target="#permission_to_route" data-bs-toggle="collapse" href="#">
+                    <i class="ri-home-3-line"></i><span>Permission to Router</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="permission_to_route" class="nav-content collapse {{ Request::segment(1) == 'permission_to_route' ? 'show' : '' }}" data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="{{ route('permission_to_route.create') }}" class="{{ Request::segment(1) == 'permission_to_route' && Request::segment(2) == 'create' ? 'active' : '' }}">
+                            <i class="bi bi-circle"></i><span>Add</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('permission_to_route.index') }}" class="{{ Request::segment(1) == 'permission_to_route' && Request::segment(2) == '' ? 'active' : '' }}">
+                            <i class="bi bi-circle"></i><span>View</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
 
 
         </ul>
